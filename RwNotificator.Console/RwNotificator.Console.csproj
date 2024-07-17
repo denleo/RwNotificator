@@ -5,11 +5,17 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <ApplicationIcon>train.ico</ApplicationIcon>
+        <ApplicationIcon>assets\rw.ico</ApplicationIcon>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <IsPackable>false</IsPackable>
     </PropertyGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\RwNotificator.Core\RwNotificator.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="assets\rw.ico" />
     </ItemGroup>
 
 </Project>

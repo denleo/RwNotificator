@@ -20,10 +20,9 @@ public partial class TrainAvailabilityScraper
     public TrainAvailabilityScraper(string scheduleUrl)
     {
         ArgumentNullException.ThrowIfNull(scheduleUrl);
+        
         if (!RwRouteRegex().IsMatch(scheduleUrl))
-        {
             throw new ArgumentException("Invalid url parameter", nameof(scheduleUrl));
-        }
         
         _scheduleUrl = scheduleUrl;
     }
@@ -64,6 +63,4 @@ public partial class TrainAvailabilityScraper
         return element.QuerySelector(".sch-table__cell.cell-4")
             !.ClassList.Contains("empty");
     }
-
-
 }

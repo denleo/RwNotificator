@@ -26,9 +26,13 @@ while (true)
     if (isAvailable)
     {
         BeepPlayer.PlayAudio();
+        
         Console.WriteLine(scheduleUrl);
         Console.WriteLine("Press any key to exit...");
         Console.ReadKey();
+        
+        BeepPlayer.StopAudio();
+        
         return;
     }
     
